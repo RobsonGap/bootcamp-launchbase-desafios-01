@@ -50,7 +50,7 @@ Comece criando constantes para armazenar o `nome`, `peso`, `altura` e `sexo` de 
 A partir desses dados armazene em uma constante chamada `imc` o cálculo do índice de massa corporal definido pela fórmula abaixo:
 
 ```js
-const imc = 29.9
+const imc = peso / (altura * altura)
 ```
 
 Baseado no valor obtido através desse cálculo exiba as seguintes mensagens:
@@ -67,10 +67,10 @@ _Obs.: Esse cálculo é fictício, dentro da aposentadoria existem muitos outros
 Comece criando constantes para armazenar `nome`, `sexo`, `idade` e `contribuicao`(em anos), por exemplo:
 
 ```js
-const nome = "Robson";
+const nome = "Manoel";
 const sexo = "Masculino";
-const idade = 27;
-const 
+const idade = 48;
+const contribuicao = 23
 
 ```
 
@@ -109,3 +109,45 @@ Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](../LICENSE) para
 ---
 
 Feito com :purple_heart: by [Rocketseat](https://rocketseat.com.br) :wave: [Entre na nossa comunidade!](https://discordapp.com/invite/gCRAFhc)
+
+
+## Cálculo de IMC
+
+```js
+const nome = 'robson';
+const peso = 80;
+const altura = 1.89
+
+const imc = peso / (altura * altura)
+
+let message = "";
+
+if (imc >= 30) {
+  message = `${nome} você está acima do peso`
+} else {
+  message = `${nome} você não está acima do peso`
+}
+
+console.log(message);
+
+``` 
+## Aposentadoria 
+
+```js
+const nome = 'Silvana';
+const sexo = 'F';
+const idade = 48;
+const contribuicao = 23;
+
+const calculoContribuicao = idade + contribuicao;
+
+// essas variáveis irão retornar true ou false
+const homemPodeAposentar = sexo == 'M' && contribuicao >= 35 && calculoContribuicao >= 95;
+const mulherPodeAposentar = sexo == 'F' && contribuicao >= 30 && calculoContribuicao >=85;
+
+if ( homemPodeAposentar || mulherPodeAposentar ) {
+     console.log(`${nome}, você pode se aposentar!`)
+} else {
+  console.log(`${nome}, você não pode se aposentar!`)
+}
+```
