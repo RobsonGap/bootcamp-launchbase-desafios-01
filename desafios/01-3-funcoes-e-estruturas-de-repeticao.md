@@ -45,3 +45,4 @@ for (let usuario of usuarios) {
         console.log(`${usuario.nome} possui saldo NEGATIVO de ${saldo.toFixed(2)}`)
       }
 }
+```
